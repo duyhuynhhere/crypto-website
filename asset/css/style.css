@@ -1,35 +1,35 @@
 /* import inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   --background-color: #fff;
   --background-color-primary: #fff;
-  --background-color-secondary: #EFF2F5;
+  --background-color-secondary: #eff2f5;
 
   --color-white: #000;
   --color-black: #fff;
   --border-color: #d4d4d4;
-  --text-secondary: #55626F;
+  --text-secondary: #55626f;
 
   --chart-light-up: #fff;
   --chart-dark-bg: #050505;
   --chart-light-border: #d4d4d4;
   --chart-dark-border: #333;
 
-  --links-color: #1565C0;
+  --links-color: #1565c0;
 }
 
 #dark-theme {
   --background-color: #050505;
-  --background-color-primary: #0E1218;
-  --background-color-secondary: #1C2025;
+  --background-color-primary: #0e1218;
+  --background-color-secondary: #1c2025;
 
   --color-white: #fff;
   --color-black: #000;
   --border-color: #1d1f22;
   --text-secondary: #bebebe;
 
-  --link-color: #1565C0;
+  --link-color: #1565c0;
 }
 
 * {
@@ -38,7 +38,7 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -58,6 +58,11 @@ div::-webkit-scrollbar-thumb {
   border-radius: 12px;
   width: 20%;
 }
+
+/* .scale-bitcoin {
+  width: 100px;
+  height: auto;
+} */
 
 .red {
   color: red !important;
@@ -84,6 +89,22 @@ img {
   object-fit: cover;
 }
 
+table tr td img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 6px;
+  border-radius: 12px;
+}
+
+table tr td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+table tr td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
 body {
   background: var(--background-color);
   display: flex;
@@ -104,7 +125,7 @@ body {
   padding: 16px 20px;
 }
 
-.global p{
+.global p {
   font-size: 12px;
   color: var(--color-white);
 }
@@ -139,7 +160,7 @@ nav .left-section .nav-links {
   gap: 10px;
 }
 
-nav .left-section .nav-links a{
+nav .left-section .nav-links a {
   font-size: 13px;
   padding: 10px 14px;
   border-radius: 12px;
@@ -195,4 +216,107 @@ nav .right-section > i.ri-sun-line {
 
 nav .right-section > i.ri-moon-line {
   transform: rotate(360deg);
+}
+
+.trending {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trending .coins-wrapper,
+.trending .nfts-wrapper {
+  width: 49%;
+}
+
+.trending h3 {
+  color: var(--color-white);
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.trending .coins-wrapper .container,
+.trending .nfts-wrapper .container {
+  background: var(--background-color-primary);
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.trending table {
+  width: 100%;
+  border-spacing: 0 20px;
+}
+
+.trending table th {
+  color: var(--color-white);
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trending thead tr:hover {
+  background: transparent !important;
+  cursor: unset !important;
+}
+
+.trending .coins-wrapper table tr {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trending table tr td {
+  padding: 5px;
+}
+
+.trending table tr td {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.trending .coins-wrapper table tr:hover,
+.trending .coins-wrapper table tr:hover td.table-fixed-column {
+  background: var(--background-color-secondary);
+}
+
+.trending .coins-wrapper .container .table-fixed-column,
+.trending .nfts-wrapper .container .table-fixed-column {
+  left: -20px;
+}
+
+.table-fixed-column {
+  background: var(--background-color-primary);
+  position: sticky;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.spinner {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--text-secondary);
+  border-top: 6px solid var(--background-color-secondary);
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+  margin: 10px auto 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  display: none;
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
 }
