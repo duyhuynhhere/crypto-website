@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fullstack Crypto Marketplace | Duy Huynh</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
@@ -339,7 +339,7 @@
           </div>
         </div>
         <div class="tab-content" id="tab2">
-          <div id="exchange-list">
+          <div id="exchange-list" style="display: none">
             <table>
               <thead>
                 <tr>
@@ -421,7 +421,7 @@
           </div>
         </div>
         <div class="tab-content" id="tab3">
-          <div id="category">
+          <div id="category" style="display: none">
             <table>
               <thead>
                 <tr>
@@ -499,8 +499,91 @@
               </tr>
             </table>
           </div>
+          <div class="spinner" id="category"></div>
+          <div class="error-message" id="category-list-error">
+            API limit reached. Please try again later.
+          </div>
+        </div>
+        <div class="tab-content" id="tab4">
+          <div id="company-list">
+            <table>
+              <thead>
+                <tr>
+                  <th class="table-fixed-column">Company</th>
+                  <th>Total BTC</th>
+                  <th>Entry Value</th>
+                  <th>Total Currency Value</th>
+                  <th>Total %</th>
+                </tr>
+              </thead>
+
+              <tr>
+                <td class="name-column table-fixed-column">
+                  MicroStrategy Inc.
+                </td>
+                <td>226331</td>
+                <td>8330000000</td>
+                <td>14060053580</td>
+                <td class="green">1.078%</td>
+              </tr>
+              <tr>
+                <td class="name-column table-fixed-column">
+                  MicroStrategy Inc.
+                </td>
+                <td>226331</td>
+                <td>8330000000</td>
+                <td>14060053580</td>
+                <td class="green">1.078%</td>
+              </tr>
+              <tr>
+                <td class="name-column table-fixed-column">
+                  MicroStrategy Inc.
+                </td>
+                <td>226331</td>
+                <td>8330000000</td>
+                <td>14060053580</td>
+                <td class="green">1.078%</td>
+              </tr>
+              <tr>
+                <td class="name-column table-fixed-column">
+                  MicroStrategy Inc.
+                </td>
+                <td>226331</td>
+                <td>8330000000</td>
+                <td>14060053580</td>
+                <td class="green">1.078%</td>
+              </tr>
+              <tr>
+                <td class="name-column table-fixed-column">
+                  MicroStrategy Inc.
+                </td>
+                <td>226331</td>
+                <td>8330000000</td>
+                <td>14060053580</td>
+                <td class="green">1.078%</td>
+              </tr>
+            </table>
+          </div>
+          <div class="spinner" id="company-list-spinner"></div>
+          <div class="error-message" id="company-list-error">
+            API limit reached. Please try again later.
+          </div>
         </div>
       </div>
     </div>
+
+    <footer>
+      <p>Just For Fun.</p>
+      <div class="social-icons">
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="#"><i class="ri-github-fill"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+        <a href="#"><i class="ri-reddit-fill"></i></a>
+      </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTop">
+      <i class="ri-arrow-up-s-line"></i>
+    </button>
   </body>
 </html>
